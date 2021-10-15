@@ -14,9 +14,13 @@ const lengthOfLongestSubstring = function(s) {
     const charIdx = currSub.indexOf(s[i])
     if (charIdx !== -1) {
       currSub.splice(0, charIdx + 1)
+      console.log(s[i],charIdx,currSub)
     }
     currSub.push(s[i])
     longSubLength = Math.max(longSubLength, currSub.length)
   }
   return longSubLength
 }
+
+lengthOfLongestSubstring("abcabcbb")
+
